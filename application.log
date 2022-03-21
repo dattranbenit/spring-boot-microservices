@@ -1,0 +1,52 @@
+2022-03-21 15:40:17.999  INFO [statistic-service,,] 2940 --- [restartedMain] s.StatisticServiceApplication            : Starting StatisticServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2940 (/Users/dat/Documents/microservices/statistic-service/target/classes started by dat in /Users/dat/Documents/microservices/statistic-service)
+2022-03-21 15:40:18.000  INFO [statistic-service,,] 2940 --- [restartedMain] s.StatisticServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-03-21 15:40:18.041  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-03-21 15:40:18.041  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=statistic-service, profiles=[default], label=null, version=null, state=null
+2022-03-21 15:40:18.041  INFO [statistic-service,,] 2940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 15:40:18.041  INFO [statistic-service,,] 2940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 15:40:18.601  INFO [statistic-service,,] 2940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 15:40:18.624  INFO [statistic-service,,] 2940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2022-03-21 15:40:18.802  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9112d4b8-2d31-3b92-91db-82b155038aca
+2022-03-21 15:40:19.228  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8004 (http)
+2022-03-21 15:40:19.232  INFO [statistic-service,,] 2940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-21 15:40:19.232  INFO [statistic-service,,] 2940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-21 15:40:19.274  INFO [statistic-service,,] 2940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-21 15:40:19.274  INFO [statistic-service,,] 2940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2022-03-21 15:40:19.805  INFO [statistic-service,,] 2940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-21 15:40:19.828  INFO [statistic-service,,] 2940 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-21 15:40:19.887  INFO [statistic-service,,] 2940 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-21 15:40:19.931  INFO [statistic-service,,] 2940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-21 15:40:20.058  INFO [statistic-service,,] 2940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-21 15:40:20.065  INFO [statistic-service,,] 2940 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-03-21 15:40:20.392  INFO [statistic-service,,] 2940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-21 15:40:20.397  INFO [statistic-service,,] 2940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 15:40:20.722  WARN [statistic-service,,] 2940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 15:40:21.394  WARN [statistic-service,,] 2940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-21 15:40:21.414  INFO [statistic-service,,] 2940 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-21 15:40:21.502  WARN [statistic-service,,] 2940 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-21 15:40:21.547  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2022-03-21 15:40:21.607  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-21 15:40:21.628  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-21 15:40:21.630  INFO [statistic-service,,] 2940 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-21 15:40:21.640  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-21 15:40:21.640  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-21 15:40:21.640  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-21 15:40:21.641  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-21 15:40:21.641  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-21 15:40:21.641  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-21 15:40:21.641  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-21 15:40:21.728  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-21 15:40:21.730  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-21 15:40:21.731  INFO [statistic-service,,] 2940 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-21 15:40:21.734  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1647852021733 with initial instances count: 1
+2022-03-21 15:40:21.739  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application STATISTIC-SERVICE with eureka with status UP
+2022-03-21 15:40:21.739  INFO [statistic-service,,] 2940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1647852021739, current=UP, previous=STARTING]
+2022-03-21 15:40:21.740  INFO [statistic-service,,] 2940 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_STATISTIC-SERVICE/192.168.1.7:statistic-service:8004: registering service...
+2022-03-21 15:40:21.752  INFO [statistic-service,,] 2940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8004 (http) with context path ''
+2022-03-21 15:40:21.753  INFO [statistic-service,,] 2940 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8004
+2022-03-21 15:40:21.765  INFO [statistic-service,,] 2940 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 - registration status: 204
+2022-03-21 15:40:21.773  INFO [statistic-service,,] 2940 --- [restartedMain] s.StatisticServiceApplication            : Started StatisticServiceApplication in 4.324 seconds (JVM running for 5.033)
+2022-03-21 15:40:21.891  INFO [statistic-service,,] 2940 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 15:40:21.891  INFO [statistic-service,,] 2940 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-21 15:40:21.893  INFO [statistic-service,,] 2940 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-21 15:41:26.887  INFO [statistic-service,ffcbe592e6b87bfa,eff46c5bc8408271] 2940 --- [http-nio-8004-exec-3] s.controller.StatisticController         : Add statistic
