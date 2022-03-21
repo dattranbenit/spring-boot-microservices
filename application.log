@@ -1,0 +1,173 @@
+2022-03-21 15:39:53.558  INFO 2921 --- [restartedMain] d.DiscoveryServiceApplication            : Starting DiscoveryServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2921 (/Users/dat/Documents/microservices/discovery-service/target/classes started by dat in /Users/dat/Documents/microservices/discovery-service)
+2022-03-21 15:39:53.558  INFO 2921 --- [restartedMain] d.DiscoveryServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-03-21 15:39:53.572  INFO 2921 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-03-21 15:39:53.572  INFO 2921 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=discovery-service, profiles=[default], label=null, version=null, state=null
+2022-03-21 15:39:53.573  INFO 2921 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 15:39:53.573  INFO 2921 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 15:39:53.981  INFO 2921 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ccdd41dc-ccbf-39ca-9214-6c1d2dced79e
+2022-03-21 15:39:54.189  INFO 2921 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-03-21 15:39:54.192  INFO 2921 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-21 15:39:54.193  INFO 2921 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-21 15:39:54.223  INFO 2921 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-21 15:39:54.223  INFO 2921 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 650 ms
+2022-03-21 15:39:54.410  INFO 2921 --- [restartedMain] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-03-21 15:39:54.432  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-21 15:39:54.433  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-21 15:39:54.466  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-21 15:39:54.466  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-21 15:39:54.814  INFO 2921 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-21 15:39:54.820  INFO 2921 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-03-21 15:39:54.842  WARN 2921 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-21 15:39:54.849  INFO 2921 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-21 15:39:54.861  INFO 2921 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-21 15:39:54.861  INFO 2921 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-03-21 15:39:54.863  INFO 2921 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1647851994862 with initial instances count: 0
+2022-03-21 15:39:54.875  INFO 2921 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-03-21 15:39:54.876  INFO 2921 --- [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8000/eureka/]
+2022-03-21 15:39:54.927  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-21 15:39:54.927  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-21 15:39:54.927  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-21 15:39:54.927  INFO 2921 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-21 15:39:54.968  INFO 2921 --- [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8000/eureka/
+2022-03-21 15:39:54.971  INFO 2921 --- [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-03-21 15:39:54.972  INFO 2921 --- [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-03-21 15:39:54.975  INFO 2921 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-03-21 15:39:55.004  INFO 2921 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICE with eureka with status UP
+2022-03-21 15:39:55.006  INFO 2921 --- [Thread-18] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-03-21 15:39:55.009  INFO 2921 --- [Thread-18] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-03-21 15:39:55.009  INFO 2921 --- [Thread-18] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-03-21 15:39:55.010  INFO 2921 --- [Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-03-21 15:39:55.010  INFO 2921 --- [Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-03-21 15:39:55.010  INFO 2921 --- [Thread-18] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-03-21 15:39:55.013  INFO 2921 --- [Thread-18] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-03-21 15:39:55.014  INFO 2921 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2022-03-21 15:39:55.014  INFO 2921 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8000
+2022-03-21 15:39:55.026  INFO 2921 --- [restartedMain] d.DiscoveryServiceApplication            : Started DiscoveryServiceApplication in 1.869 seconds (JVM running for 2.161)
+2022-03-21 15:39:55.066  INFO 2921 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 15:39:55.066  INFO 2921 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-21 15:39:55.067  INFO 2921 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-21 15:39:56.253  WARN 2921 --- [http-nio-8000-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: STATISTIC-SERVICE - 192.168.1.7:statistic-service:8004
+2022-03-21 15:39:56.253  WARN 2921 --- [http-nio-8000-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): STATISTIC-SERVICE - 192.168.1.7:statistic-service:8004
+2022-03-21 15:39:56.276  INFO 2921 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status UP (replication=false)
+2022-03-21 15:39:56.843  INFO 2921 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status UP (replication=true)
+2022-03-21 15:40:00.503  WARN 2921 --- [http-nio-8000-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: NOTIFICATION-SERVICE - 192.168.1.7:notification-service:8003
+2022-03-21 15:40:00.503  WARN 2921 --- [http-nio-8000-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Renew): NOTIFICATION-SERVICE - 192.168.1.7:notification-service:8003
+2022-03-21 15:40:00.505  INFO 2921 --- [http-nio-8000-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status UP (replication=false)
+2022-03-21 15:40:01.019  INFO 2921 --- [http-nio-8000-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status UP (replication=true)
+2022-03-21 15:40:02.894  INFO 2921 --- [http-nio-8000-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ACCOUNT-SERVICE/192.168.1.7:account-service:8002 with status DOWN (replication=false)
+2022-03-21 15:40:03.402  INFO 2921 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ACCOUNT-SERVICE/192.168.1.7:account-service:8002 with status DOWN (replication=true)
+2022-03-21 15:40:06.952  INFO 2921 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ACCOUNT-SERVICE/192.168.1.7:account-service:8002 (replication=false)
+2022-03-21 15:40:07.462  WARN 2921 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: ACCOUNT-SERVICE/192.168.1.7:account-service:8002
+2022-03-21 15:40:07.462  INFO 2921 --- [http-nio-8000-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): ACCOUNT-SERVICE - 192.168.1.7:account-service:8002
+2022-03-21 15:40:07.463  WARN 2921 --- [TaskBatchingWorker-target_localhost-1] c.n.eureka.cluster.ReplicationTask       : The replication of task ACCOUNT-SERVICE/192.168.1.7:account-service:8002:Cancel@localhost failed with response code 404
+2022-03-21 15:40:07.463  WARN 2921 --- [TaskBatchingWorker-target_localhost-1] c.netflix.eureka.cluster.PeerEurekaNode  : ACCOUNT-SERVICE/192.168.1.7:account-service:8002:Cancel@localhost: missing entry.
+2022-03-21 15:40:08.968  WARN 2921 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: GATEWAY-SERVICE - 192.168.1.7:gateway-service:8005
+2022-03-21 15:40:08.968  WARN 2921 --- [http-nio-8000-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): GATEWAY-SERVICE - 192.168.1.7:gateway-service:8005
+2022-03-21 15:40:08.974  INFO 2921 --- [http-nio-8000-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status UP (replication=false)
+2022-03-21 15:40:09.482  INFO 2921 --- [http-nio-8000-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status UP (replication=true)
+2022-03-21 15:40:11.993  INFO 2921 --- [http-nio-8000-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status DOWN (replication=false)
+2022-03-21 15:40:12.502  INFO 2921 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status DOWN (replication=true)
+2022-03-21 15:40:15.203  INFO 2921 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 (replication=false)
+2022-03-21 15:40:15.536  WARN 2921 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: MONITOR-SERVICE - 192.168.1.7:monitor-service:8006
+2022-03-21 15:40:15.536  WARN 2921 --- [http-nio-8000-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Renew): MONITOR-SERVICE - 192.168.1.7:monitor-service:8006
+2022-03-21 15:40:15.538  INFO 2921 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status UP (replication=false)
+2022-03-21 15:40:15.731  WARN 2921 --- [http-nio-8000-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: STATISTIC-SERVICE/192.168.1.7:statistic-service:8004
+2022-03-21 15:40:15.732  INFO 2921 --- [http-nio-8000-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): STATISTIC-SERVICE - 192.168.1.7:statistic-service:8004
+2022-03-21 15:40:15.732  INFO 2921 --- [http-nio-8000-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status UP (replication=true)
+2022-03-21 15:40:15.733  WARN 2921 --- [TaskBatchingWorker-target_localhost-8] c.n.eureka.cluster.ReplicationTask       : The replication of task STATISTIC-SERVICE/192.168.1.7:statistic-service:8004:Cancel@localhost failed with response code 404
+2022-03-21 15:40:15.733  WARN 2921 --- [TaskBatchingWorker-target_localhost-8] c.netflix.eureka.cluster.PeerEurekaNode  : STATISTIC-SERVICE/192.168.1.7:statistic-service:8004:Cancel@localhost: missing entry.
+2022-03-21 15:40:17.326  INFO 2921 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ACCOUNT-SERVICE/192.168.1.7:account-service:8002 with status UP (replication=false)
+2022-03-21 15:40:17.834  INFO 2921 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ACCOUNT-SERVICE/192.168.1.7:account-service:8002 with status UP (replication=true)
+2022-03-21 15:40:21.764  INFO 2921 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status UP (replication=false)
+2022-03-21 15:40:22.275  INFO 2921 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance STATISTIC-SERVICE/192.168.1.7:statistic-service:8004 with status UP (replication=true)
+2022-03-21 15:40:25.334  INFO 2921 --- [http-nio-8000-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status DOWN (replication=false)
+2022-03-21 15:40:25.845  INFO 2921 --- [http-nio-8000-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status DOWN (replication=true)
+2022-03-21 15:40:28.360  INFO 2921 --- [http-nio-8000-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 (replication=false)
+2022-03-21 15:40:28.865  WARN 2921 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003
+2022-03-21 15:40:28.865  INFO 2921 --- [http-nio-8000-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): NOTIFICATION-SERVICE - 192.168.1.7:notification-service:8003
+2022-03-21 15:40:28.866  WARN 2921 --- [TaskBatchingWorker-target_localhost-16] c.n.eureka.cluster.ReplicationTask       : The replication of task NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003:Cancel@localhost failed with response code 404
+2022-03-21 15:40:28.866  WARN 2921 --- [TaskBatchingWorker-target_localhost-16] c.netflix.eureka.cluster.PeerEurekaNode  : NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003:Cancel@localhost: missing entry.
+2022-03-21 15:40:29.168  INFO 2921 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status DOWN (replication=false)
+2022-03-21 15:40:29.681  INFO 2921 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status DOWN (replication=true)
+2022-03-21 15:40:34.053  INFO 2921 --- [http-nio-8000-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status UP (replication=false)
+2022-03-21 15:40:34.261  INFO 2921 --- [http-nio-8000-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 (replication=false)
+2022-03-21 15:40:34.557  INFO 2921 --- [http-nio-8000-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTIFICATION-SERVICE/192.168.1.7:notification-service:8003 with status UP (replication=true)
+2022-03-21 15:40:34.557  WARN 2921 --- [http-nio-8000-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: GATEWAY-SERVICE/192.168.1.7:gateway-service:8005
+2022-03-21 15:40:34.557  INFO 2921 --- [http-nio-8000-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): GATEWAY-SERVICE - 192.168.1.7:gateway-service:8005
+2022-03-21 15:40:34.558  WARN 2921 --- [TaskBatchingWorker-target_localhost-1] c.n.eureka.cluster.ReplicationTask       : The replication of task GATEWAY-SERVICE/192.168.1.7:gateway-service:8005:Cancel@localhost failed with response code 404
+2022-03-21 15:40:34.558  WARN 2921 --- [TaskBatchingWorker-target_localhost-1] c.netflix.eureka.cluster.PeerEurekaNode  : GATEWAY-SERVICE/192.168.1.7:gateway-service:8005:Cancel@localhost: missing entry.
+2022-03-21 15:40:39.035  INFO 2921 --- [http-nio-8000-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status UP (replication=false)
+2022-03-21 15:40:39.541  INFO 2921 --- [http-nio-8000-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/192.168.1.7:gateway-service:8005 with status UP (replication=true)
+2022-03-21 15:40:43.918  INFO 2921 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status DOWN (replication=false)
+2022-03-21 15:40:44.431  INFO 2921 --- [http-nio-8000-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status DOWN (replication=true)
+2022-03-21 15:40:49.045  INFO 2921 --- [http-nio-8000-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 (replication=false)
+2022-03-21 15:40:49.550  WARN 2921 --- [http-nio-8000-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: MONITOR-SERVICE/192.168.1.7:monitor-service:8006
+2022-03-21 15:40:49.550  INFO 2921 --- [http-nio-8000-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): MONITOR-SERVICE - 192.168.1.7:monitor-service:8006
+2022-03-21 15:40:49.551  WARN 2921 --- [TaskBatchingWorker-target_localhost-3] c.n.eureka.cluster.ReplicationTask       : The replication of task MONITOR-SERVICE/192.168.1.7:monitor-service:8006:Cancel@localhost failed with response code 404
+2022-03-21 15:40:49.551  WARN 2921 --- [TaskBatchingWorker-target_localhost-3] c.netflix.eureka.cluster.PeerEurekaNode  : MONITOR-SERVICE/192.168.1.7:monitor-service:8006:Cancel@localhost: missing entry.
+2022-03-21 15:40:55.014  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-21 15:40:55.952  INFO 2921 --- [http-nio-8000-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status UP (replication=false)
+2022-03-21 15:40:56.461  INFO 2921 --- [http-nio-8000-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MONITOR-SERVICE/192.168.1.7:monitor-service:8006 with status UP (replication=true)
+2022-03-21 15:41:55.018  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 15:42:55.019  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 15:43:55.022  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 15:44:55.026  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:45:55.027  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 15:46:55.031  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 15:47:55.035  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 15:48:55.035  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 15:49:55.036  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 36ms
+2022-03-21 15:50:55.038  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:51:55.038  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 15:52:55.040  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:53:55.043  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 15:54:54.977  INFO 2921 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2022-03-21 15:54:55.046  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:55:55.049  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:56:55.049  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 15:57:55.051  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 15:58:55.053  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 15:59:55.055  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:00:55.057  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:01:55.059  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:02:55.059  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:03:55.061  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:04:55.061  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:05:55.061  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:06:55.062  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:07:55.062  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:08:55.063  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:09:54.977  INFO 2921 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2022-03-21 16:09:55.065  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:10:55.065  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:11:55.067  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:14:05.237  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2022-03-21 16:15:05.238  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:16:05.241  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:17:05.245  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:18:05.245  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:19:05.248  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:20:05.248  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:21:05.251  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:22:05.252  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:23:05.252  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-21 16:24:05.252  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-21 16:25:05.254  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:26:05.128  INFO 2921 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2022-03-21 16:26:05.259  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 16:27:05.262  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:28:05.266  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:29:05.267  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-21 16:30:05.271  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 16:31:05.275  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:32:05.276  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:33:05.281  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 16:34:05.282  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:35:05.287  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:36:05.290  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 23ms
+2022-03-21 16:37:05.292  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-21 16:38:05.296  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2022-03-21 16:39:05.300  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2022-03-21 16:40:05.302  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-21 16:41:05.130  INFO 2921 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2022-03-21 16:41:05.305  INFO 2921 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
