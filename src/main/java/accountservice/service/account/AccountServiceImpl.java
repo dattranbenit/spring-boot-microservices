@@ -65,12 +65,10 @@ class AccountServiceImpl implements AccountService {
     @Override
     public List<AccountDTO> getAll() {
         List<AccountDTO> accountDTOs = new ArrayList<>();
-        logger.info("AccountService: Get All");
-
+        logger.info("AccountService: Get All"); // testing Sleuth dependency
         accountDao.findAll().forEach((account) -> {
             accountDTOs.add(modelMapper.map(account, AccountDTO.class));
         });
-
         return accountDTOs;
     }
 
