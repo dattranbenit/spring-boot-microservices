@@ -12,8 +12,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class StatisticDTO {
     private Long id;
+
     @NonNull
     private String message;
+
     @NonNull
     private Date createdDate;
 }
