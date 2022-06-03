@@ -35,7 +35,7 @@ public class AccountController {
         MessageDTO messageDTO = new MessageDTO();
         messageDTO.setFrom("memberd123@gmail.com");
         messageDTO.setTo(accountDTO.getEmail());// username is email
-        messageDTO.setToName(accountDTO.getName());
+        messageDTO.setToName(accountDTO.getUsername());
         messageDTO.setSubject("Welcome");
         messageDTO.setContent("Microservices content");
 
