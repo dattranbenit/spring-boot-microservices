@@ -1,0 +1,598 @@
+2022-06-03 11:27:43.248  INFO 1838 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 1838 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 11:27:43.249  INFO 1838 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 11:27:43.302  INFO 1838 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 11:27:43.302  INFO 1838 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 11:27:43.302  INFO 1838 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 11:27:43.302  INFO 1838 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 11:27:43.938  INFO 1838 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-03 11:27:43.960  INFO 1838 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+2022-06-03 11:27:44.080  INFO 1838 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=efc5fb97-ddd5-3036-86a6-3614f3f0b170
+2022-06-03 11:27:44.939  INFO 1838 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 11:27:44.943  INFO 1838 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 11:27:44.944  INFO 1838 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-03 11:27:44.980  INFO 1838 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 11:27:44.980  INFO 1838 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1677 ms
+2022-06-03 11:27:45.013 ERROR 1838 --- [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/simple/SimpleMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourcePoolMetadataMeterBinder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/jdbc/DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourcePoolMetadataMeterBinder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-06-03 11:27:45.022  INFO 1838 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-03 11:27:45.026  WARN 1838 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-06-03 11:27:45.036  INFO 1838 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-03 11:27:45.049 ERROR 1838 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-06-03 11:28:45.213  INFO 1845 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 1845 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 11:28:45.214  INFO 1845 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 11:28:45.247  INFO 1845 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 11:28:45.247  INFO 1845 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 11:28:45.247  INFO 1845 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 11:28:45.247  INFO 1845 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 11:28:45.686  INFO 1845 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ded10f7c-d1a2-339a-abc5-3d99dabba19c
+2022-06-03 11:28:45.880  INFO 1845 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 11:28:45.884  INFO 1845 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 11:28:45.884  INFO 1845 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-03 11:28:45.919  INFO 1845 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 11:28:45.919  INFO 1845 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 671 ms
+2022-06-03 11:28:46.305  INFO 1845 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']] with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f359f55, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45bfc66e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d3f1804, org.springframework.security.web.header.HeaderWriterFilter@20364ff0, org.springframework.security.web.authentication.logout.LogoutFilter@1db36541, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e6a44f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38a5cfa2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26a3ec7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@227938bf, org.springframework.security.web.session.SessionManagementFilter@5bebb63a, org.springframework.security.web.access.ExceptionTranslationFilter@7ce4bb4c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19338261]
+2022-06-03 11:28:46.307  INFO 1845 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@de6ee41, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2352cf65, org.springframework.security.web.context.SecurityContextPersistenceFilter@14771c69, org.springframework.security.web.header.HeaderWriterFilter@6fce65cd, org.springframework.security.web.csrf.CsrfFilter@1c6c7a53, org.springframework.security.web.authentication.logout.LogoutFilter@2050acb0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@73cbaa22, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7dc16d39, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@a3b25aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@87f34ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1403c830, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@165349e0, org.springframework.security.web.session.SessionManagementFilter@108f2485, org.springframework.security.web.access.ExceptionTranslationFilter@10e18ea6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d174180]
+2022-06-03 11:28:46.507  WARN 1845 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 11:28:46.514  INFO 1845 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 11:28:46.535  WARN 1845 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception; nested exception is org.springframework.cloud.configuration.CompatibilityNotMetException
+2022-06-03 11:28:46.539  INFO 1845 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-03 11:28:46.550  INFO 1845 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-03 11:28:46.558 ERROR 1845 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [2.7.0] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [2.4.x, 2.5.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2022-06-03 11:29:49.100  INFO 1851 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 1851 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 11:29:49.101  INFO 1851 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 11:29:49.133  INFO 1851 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 11:29:49.133  INFO 1851 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 11:29:49.133  INFO 1851 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 11:29:49.134  INFO 1851 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 11:29:49.573  INFO 1851 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 11:29:49.760  INFO 1851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 11:29:49.764  INFO 1851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 11:29:49.765  INFO 1851 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 11:29:49.797  INFO 1851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 11:29:49.797  INFO 1851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 663 ms
+2022-06-03 11:29:50.172  INFO 1851 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 11:29:50.174  INFO 1851 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 11:29:50.372  WARN 1851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 11:29:50.379  INFO 1851 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 11:29:50.400  WARN 1851 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 11:29:50.402  INFO 1851 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 11:29:50.434  INFO 1851 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 11:29:50.448  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 11:29:50.450  INFO 1851 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:29:50.458  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 11:29:50.458  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 11:29:50.458  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 11:29:50.459  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 11:29:50.459  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 11:29:50.459  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 11:29:50.459  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 11:29:50.610  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 11:29:50.611  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 11:29:50.612  INFO 1851 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 11:29:50.615  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654230590614 with initial instances count: 0
+2022-06-03 11:29:50.616  INFO 1851 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 11:29:50.616  INFO 1851 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654230590616, current=UP, previous=STARTING]
+2022-06-03 11:29:50.617  INFO 1851 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 11:29:50.627  INFO 1851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 11:29:50.628  INFO 1851 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 11:29:50.641  INFO 1851 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.863 seconds (JVM running for 2.403)
+2022-06-03 11:29:50.666  INFO 1851 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 11:29:50.981  INFO 1851 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 11:29:50.981  INFO 1851 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 11:29:50.982  INFO 1851 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 11:30:20.612  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 11:30:20.614  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 11:30:20.614  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 11:30:20.614  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 11:30:20.614  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 11:30:20.614  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-03 11:30:20.617  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 11:30:20.639  INFO 1851 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 11:34:50.464  INFO 1851 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:39:50.469  INFO 1851 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:44:50.476  INFO 1851 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:49:50.483  INFO 1851 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:52:43.285  WARN 1851 --- [http-nio-8007-exec-3] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:52:43.289  WARN 1851 --- [http-nio-8007-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 11:53:38.182  WARN 1851 --- [http-nio-8007-exec-7] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:53:38.184  WARN 1851 --- [http-nio-8007-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 11:53:49.461  WARN 1851 --- [http-nio-8007-exec-9] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:53:49.462  WARN 1851 --- [http-nio-8007-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 11:54:16.048  WARN 1851 --- [http-nio-8007-exec-3] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:54:16.049  WARN 1851 --- [http-nio-8007-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 11:54:50.505  INFO 1851 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:55:04.322  WARN 1851 --- [http-nio-8007-exec-6] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:55:04.323  WARN 1851 --- [http-nio-8007-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 11:55:40.623  INFO 1851 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 11:55:40.623  INFO 1851 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654232140623, current=DOWN, previous=UP]
+2022-06-03 11:55:40.623  INFO 1851 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 11:55:40.640  INFO 1851 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 11:55:40.643  INFO 1851 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 11:55:43.651  INFO 1851 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 11:55:43.670  INFO 1851 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 11:55:43.675  INFO 1851 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 11:55:46.319  INFO 2044 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2044 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 11:55:46.320  INFO 2044 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 11:55:46.351  INFO 2044 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 11:55:46.351  INFO 2044 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 11:55:46.352  INFO 2044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 11:55:46.352  INFO 2044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 11:55:46.880  INFO 2044 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 11:55:47.058  INFO 2044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 11:55:47.063  INFO 2044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 11:55:47.063  INFO 2044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 11:55:47.102  INFO 2044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 11:55:47.102  INFO 2044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
+2022-06-03 11:55:47.502  INFO 2044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 11:55:47.505  INFO 2044 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 11:55:47.699  WARN 2044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 11:55:47.707  INFO 2044 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 11:55:47.729  WARN 2044 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 11:55:47.731  INFO 2044 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 11:55:47.763  INFO 2044 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 11:55:47.774  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 11:55:47.776  INFO 2044 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 11:55:47.783  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 11:55:47.872  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 11:55:47.873  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 11:55:47.874  INFO 2044 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 11:55:47.876  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654232147876 with initial instances count: 1
+2022-06-03 11:55:47.877  INFO 2044 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 11:55:47.877  INFO 2044 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654232147877, current=UP, previous=STARTING]
+2022-06-03 11:55:47.877  INFO 2044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 11:55:47.887  INFO 2044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 11:55:47.888  INFO 2044 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 11:55:47.897  INFO 2044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 11:55:47.900  INFO 2044 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.93 seconds (JVM running for 2.287)
+2022-06-03 11:55:48.392  INFO 2044 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 11:55:48.392  INFO 2044 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 11:55:48.393  INFO 2044 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 11:56:32.076  WARN 2044 --- [http-nio-8007-exec-4] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 11:56:32.081  WARN 2044 --- [http-nio-8007-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 12:00:00.149  WARN 2044 --- [http-nio-8007-exec-2] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 12:00:00.160  WARN 2044 --- [http-nio-8007-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 12:00:47.790  INFO 2044 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:05:47.796  INFO 2044 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:07:28.248  WARN 2044 --- [http-nio-8007-exec-3] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidRequestException, An authorization code must be supplied.
+2022-06-03 12:07:28.250  WARN 2044 --- [http-nio-8007-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_request", error_description="An authorization code must be supplied."]
+2022-06-03 12:10:25.757  INFO 2044 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 12:10:25.758  INFO 2044 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233025758, current=DOWN, previous=UP]
+2022-06-03 12:10:25.758  INFO 2044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:10:25.776  INFO 2044 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 12:10:25.790  INFO 2044 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:10:25.791  INFO 2044 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 12:10:25.802  INFO 2044 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 12:10:25.804  INFO 2044 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 12:10:28.497  INFO 2163 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2163 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 12:10:28.498  INFO 2163 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 12:10:28.535  INFO 2163 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 12:10:28.535  INFO 2163 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 12:10:28.535  INFO 2163 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 12:10:28.535  INFO 2163 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 12:10:28.993  INFO 2163 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 12:10:29.212  INFO 2163 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 12:10:29.217  INFO 2163 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 12:10:29.217  INFO 2163 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 12:10:29.259  INFO 2163 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 12:10:29.259  INFO 2163 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 723 ms
+2022-06-03 12:10:29.696  INFO 2163 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 12:10:29.698  INFO 2163 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 12:10:29.901  WARN 2163 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 12:10:29.908  INFO 2163 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 12:10:29.928  WARN 2163 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 12:10:29.930  INFO 2163 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 12:10:29.962  INFO 2163 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 12:10:29.973  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 12:10:29.975  INFO 2163 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:10:29.981  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 12:10:29.982  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:10:30.073  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:10:30.074  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 12:10:30.075  INFO 2163 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 12:10:30.077  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654233030077 with initial instances count: 1
+2022-06-03 12:10:30.077  INFO 2163 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 12:10:30.078  INFO 2163 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233030078, current=UP, previous=STARTING]
+2022-06-03 12:10:30.078  INFO 2163 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:10:30.088  INFO 2163 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 12:10:30.088  INFO 2163 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 12:10:30.099  INFO 2163 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:10:30.101  INFO 2163 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.989 seconds (JVM running for 2.45)
+2022-06-03 12:10:30.387  INFO 2163 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 12:10:30.387  INFO 2163 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 12:10:30.389  INFO 2163 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-03 12:11:08.829  INFO 2163 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 12:11:08.829  INFO 2163 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233068829, current=DOWN, previous=UP]
+2022-06-03 12:11:08.830  INFO 2163 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:11:08.839  INFO 2163 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:11:08.843  INFO 2163 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 12:11:11.852  INFO 2163 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 12:11:11.865  INFO 2163 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 12:11:11.871  INFO 2163 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 12:11:13.523  INFO 2168 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2168 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 12:11:13.524  INFO 2168 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 12:11:13.557  INFO 2168 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 12:11:13.558  INFO 2168 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 12:11:13.558  INFO 2168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 12:11:13.558  INFO 2168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 12:11:13.958  INFO 2168 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 12:11:14.144  INFO 2168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 12:11:14.147  INFO 2168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 12:11:14.147  INFO 2168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 12:11:14.180  INFO 2168 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 12:11:14.180  INFO 2168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
+2022-06-03 12:11:14.571  INFO 2168 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 12:11:14.573  INFO 2168 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 12:11:14.773  WARN 2168 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 12:11:14.781  INFO 2168 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 12:11:14.802  WARN 2168 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 12:11:14.804  INFO 2168 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 12:11:14.835  INFO 2168 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 12:11:14.846  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 12:11:14.848  INFO 2168 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 12:11:14.855  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:11:14.946  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:11:14.947  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 12:11:14.948  INFO 2168 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 12:11:14.950  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654233074949 with initial instances count: 1
+2022-06-03 12:11:14.950  INFO 2168 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 12:11:14.950  INFO 2168 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233074950, current=UP, previous=STARTING]
+2022-06-03 12:11:14.951  INFO 2168 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:11:14.961  INFO 2168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 12:11:14.962  INFO 2168 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 12:11:14.972  INFO 2168 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:11:14.974  INFO 2168 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.763 seconds (JVM running for 2.035)
+2022-06-03 12:11:15.133  INFO 2168 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 12:11:15.133  INFO 2168 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 12:11:15.134  INFO 2168 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 12:11:27.679  INFO 2168 --- [http-nio-8007-exec-1] o.s.s.o.p.e.AuthorizationEndpoint        : Handling ClientRegistrationException error: No client with requested id: null
+2022-06-03 12:11:27.681  WARN 2168 --- [http-nio-8007-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.oauth2.provider.NoSuchClientException: No client with requested id: null]
+2022-06-03 12:12:37.849  WARN 2168 --- [http-nio-8007-exec-5] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidClientException, Unauthorized grant type: authorization_code
+2022-06-03 12:12:37.855  WARN 2168 --- [http-nio-8007-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_client", error_description="Unauthorized grant type: authorization_code"]
+2022-06-03 12:12:54.984  INFO 2168 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 12:12:54.984  INFO 2168 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233174984, current=DOWN, previous=UP]
+2022-06-03 12:12:54.985  INFO 2168 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:12:54.989  INFO 2168 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:12:54.996  INFO 2168 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 12:12:58.033  INFO 2168 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 12:12:58.037  INFO 2168 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 12:12:58.040  INFO 2168 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 12:13:00.659  INFO 2187 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2187 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 12:13:00.659  INFO 2187 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 12:13:00.691  INFO 2187 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 12:13:00.692  INFO 2187 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 12:13:00.692  INFO 2187 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 12:13:00.692  INFO 2187 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 12:13:01.112  INFO 2187 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 12:13:01.297  INFO 2187 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 12:13:01.301  INFO 2187 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 12:13:01.301  INFO 2187 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 12:13:01.330  INFO 2187 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 12:13:01.330  INFO 2187 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
+2022-06-03 12:13:01.710  INFO 2187 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 12:13:01.712  INFO 2187 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 12:13:01.912  WARN 2187 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 12:13:01.921  INFO 2187 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 12:13:01.944  WARN 2187 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 12:13:01.946  INFO 2187 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 12:13:01.978  INFO 2187 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 12:13:01.989  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 12:13:01.992  INFO 2187 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:13:01.998  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 12:13:01.999  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:13:02.089  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:13:02.090  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 12:13:02.091  INFO 2187 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 12:13:02.093  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654233182093 with initial instances count: 0
+2022-06-03 12:13:02.094  INFO 2187 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 12:13:02.094  INFO 2187 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233182094, current=UP, previous=STARTING]
+2022-06-03 12:13:02.094  INFO 2187 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:13:02.105  INFO 2187 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 12:13:02.106  INFO 2187 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 12:13:02.115  INFO 2187 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:13:02.118  INFO 2187 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.756 seconds (JVM running for 2.179)
+2022-06-03 12:13:02.152  INFO 2187 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 12:13:02.152  INFO 2187 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 12:13:02.153  INFO 2187 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 12:13:32.096  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:13:32.096  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:13:32.096  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:13:32.097  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:13:32.097  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:13:32.097  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-03 12:13:32.097  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:13:32.108  INFO 2187 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:14:55.836  INFO 2187 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 12:14:55.837  INFO 2187 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233295837, current=DOWN, previous=UP]
+2022-06-03 12:14:55.837  INFO 2187 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:14:55.845  INFO 2187 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:14:55.850  INFO 2187 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 12:14:58.858  INFO 2187 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 12:14:58.869  INFO 2187 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 12:14:58.875  INFO 2187 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 12:15:00.875  INFO 2210 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2210 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 12:15:00.876  INFO 2210 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 12:15:00.907  INFO 2210 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 12:15:00.908  INFO 2210 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 12:15:00.908  INFO 2210 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 12:15:00.908  INFO 2210 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 12:15:01.323  INFO 2210 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 12:15:01.508  INFO 2210 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 12:15:01.512  INFO 2210 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 12:15:01.512  INFO 2210 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 12:15:01.542  INFO 2210 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 12:15:01.542  INFO 2210 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 634 ms
+2022-06-03 12:15:01.915  INFO 2210 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 12:15:01.917  INFO 2210 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 12:15:02.111  WARN 2210 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 12:15:02.117  INFO 2210 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 12:15:02.140  WARN 2210 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 12:15:02.142  INFO 2210 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 12:15:02.175  INFO 2210 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 12:15:02.188  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 12:15:02.192  INFO 2210 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 12:15:02.200  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:15:02.292  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:15:02.293  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 12:15:02.294  INFO 2210 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 12:15:02.296  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654233302295 with initial instances count: 0
+2022-06-03 12:15:02.296  INFO 2210 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 12:15:02.296  INFO 2210 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654233302296, current=UP, previous=STARTING]
+2022-06-03 12:15:02.297  INFO 2210 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 12:15:02.318  INFO 2210 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 12:15:02.318  INFO 2210 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 12:15:02.327  INFO 2210 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 12:15:02.330  INFO 2210 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.74 seconds (JVM running for 2.419)
+2022-06-03 12:15:02.714  INFO 2210 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 12:15:02.714  INFO 2210 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 12:15:02.716  INFO 2210 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-03 12:15:32.299  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 12:15:32.301  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 12:15:32.301  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 12:15:32.301  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 12:15:32.301  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 12:15:32.301  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-03 12:15:32.302  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 12:15:32.323  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 12:17:27.117  INFO 2210 --- [http-nio-8007-exec-9] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: HttpRequestMethodNotSupportedException, Request method 'GET' not supported
+2022-06-03 12:17:27.120  WARN 2210 --- [http-nio-8007-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-06-03 12:17:33.904  WARN 2210 --- [http-nio-8007-exec-10] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidGrantException, Invalid authorization code: HfT56T
+2022-06-03 12:17:33.905  WARN 2210 --- [http-nio-8007-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_grant", error_description="Invalid authorization code: HfT56T"]
+2022-06-03 12:23:16.919  INFO 2210 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 14:05:11.310  INFO 2210 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - Re-registering apps/AUTH-SERVICE
+2022-06-03 14:05:11.311  INFO 2210 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 14:05:11.323  INFO 2210 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 14:52:45.767  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-03 14:52:45.768  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 14:52:45.795  INFO 2210 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 14:53:24.493  INFO 2210 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 14:53:24.493  INFO 2210 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654242804493, current=DOWN, previous=UP]
+2022-06-03 14:53:24.493  INFO 2210 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 14:53:24.504  INFO 2210 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 14:53:24.505  INFO 2210 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 14:53:27.511  INFO 2210 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 14:53:27.515  INFO 2210 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 14:53:27.517  INFO 2210 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 14:53:28.775  INFO 2345 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2345 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 14:53:28.775  INFO 2345 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 14:53:28.807  INFO 2345 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 14:53:28.808  INFO 2345 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 14:53:28.808  INFO 2345 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 14:53:28.808  INFO 2345 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 14:53:29.300  INFO 2345 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 14:53:29.489  INFO 2345 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 14:53:29.492  INFO 2345 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 14:53:29.493  INFO 2345 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 14:53:29.521  INFO 2345 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 14:53:29.522  INFO 2345 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2022-06-03 14:53:29.895  INFO 2345 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 14:53:29.897  INFO 2345 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 14:53:30.088  WARN 2345 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 14:53:30.095  INFO 2345 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 14:53:30.116  WARN 2345 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 14:53:30.118  INFO 2345 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 14:53:30.150  INFO 2345 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 14:53:30.162  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 14:53:30.164  INFO 2345 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 14:53:30.171  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 14:53:30.260  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 14:53:30.262  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 14:53:30.262  INFO 2345 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 14:53:30.264  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654242810264 with initial instances count: 1
+2022-06-03 14:53:30.265  INFO 2345 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 14:53:30.265  INFO 2345 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654242810265, current=UP, previous=STARTING]
+2022-06-03 14:53:30.265  INFO 2345 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 14:53:30.275  INFO 2345 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 14:53:30.276  INFO 2345 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 14:53:30.284  INFO 2345 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 14:53:30.287  INFO 2345 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.866 seconds (JVM running for 2.161)
+2022-06-03 14:53:30.760  INFO 2345 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 14:53:30.761  INFO 2345 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 14:53:30.762  INFO 2345 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 14:53:39.470  INFO 2345 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-06-03 14:53:39.471  INFO 2345 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654242819471, current=DOWN, previous=UP]
+2022-06-03 14:53:39.471  INFO 2345 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 14:53:39.478  INFO 2345 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 14:53:39.483  INFO 2345 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-03 14:53:42.491  INFO 2345 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-03 14:53:42.500  INFO 2345 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - deregister  status: 200
+2022-06-03 14:53:42.506  INFO 2345 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-03 14:53:44.177  INFO 2352 --- [restartedMain] authservice.AuthServiceApplication       : Starting AuthServiceApplication using Java 1.8.0_302 on Dats-MacBook-Pro.local with PID 2352 (/Users/dat/Documents/microservices/auth-service/target/classes started by dat in /Users/dat/Documents/microservices/auth-service)
+2022-06-03 14:53:44.178  INFO 2352 --- [restartedMain] authservice.AuthServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-03 14:53:44.209  INFO 2352 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-03 14:53:44.209  INFO 2352 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-06-03 14:53:44.209  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-03 14:53:44.209  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-03 14:53:44.613  INFO 2352 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0bab0acd-90a1-384a-b0c2-c0f6bf0ec9df
+2022-06-03 14:53:44.794  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8007 (http)
+2022-06-03 14:53:44.798  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 14:53:44.798  INFO 2352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-03 14:53:44.827  INFO 2352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 14:53:44.827  INFO 2352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 617 ms
+2022-06-03 14:53:45.202  INFO 2352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]
+2022-06-03 14:53:45.204  INFO 2352 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-03 14:53:45.407  WARN 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-03 14:53:45.415  INFO 2352 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-03 14:53:45.436  WARN 2352 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-03 14:53:45.437  INFO 2352 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-06-03 14:53:45.469  INFO 2352 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-03 14:53:45.480  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-03 14:53:45.482  INFO 2352 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-03 14:53:45.490  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 14:53:45.579  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 14:53:45.580  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-03 14:53:45.581  INFO 2352 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-03 14:53:45.583  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654242825582 with initial instances count: 0
+2022-06-03 14:53:45.583  INFO 2352 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-06-03 14:53:45.583  INFO 2352 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654242825583, current=UP, previous=STARTING]
+2022-06-03 14:53:45.584  INFO 2352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007: registering service...
+2022-06-03 14:53:45.596  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8007 (http) with context path ''
+2022-06-03 14:53:45.597  INFO 2352 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8007
+2022-06-03 14:53:45.605  INFO 2352 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.1.15:auth-service:8007 - registration status: 204
+2022-06-03 14:53:45.608  INFO 2352 --- [restartedMain] authservice.AuthServiceApplication       : Started AuthServiceApplication in 1.743 seconds (JVM running for 2.055)
+2022-06-03 14:53:45.793  INFO 2352 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 14:53:45.793  INFO 2352 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 14:53:45.794  INFO 2352 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 14:54:15.583  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-03 14:54:15.585  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-03 14:54:15.604  INFO 2352 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-03 14:58:13.498 ERROR 2352 --- [http-nio-8007-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
+	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlocklistedUrls(StrictHttpFirewall.java:456) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:429) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:196) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.4.jar:2.6.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]
+
+2022-06-03 14:59:30.954  INFO 2352 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 15:04:30.961  INFO 2352 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 15:09:30.968  INFO 2352 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 15:14:38.779  INFO 2352 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
