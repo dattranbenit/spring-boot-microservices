@@ -38,7 +38,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.authenticationManager(authenticationManager).tokenStore(tokenStore())//manage end users & store token
-                 .accessTokenConverter(accessTokenConverter());
+                 .accessTokenConverter(accessTokenConverter());//token bao gom user info vs application info
     }
 
     @Override

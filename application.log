@@ -1148,3 +1148,25 @@ Consider the following:
 2022-06-03 17:46:00.857  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2022-06-03 17:56:35.333  WARN 5300 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m35s467ms).
 2022-06-03 17:58:06.328  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:03:06.334  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:08:06.341  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:13:06.346  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:18:06.299  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:23:06.300  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:28:49.653  WARN 5300 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14s143ms).
+2022-06-03 18:53:36.038  WARN 5300 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m46s385ms).
+2022-06-03 18:54:06.827  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 18:59:06.830  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:04:06.835  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:05:05.706  WARN 5300 --- [http-nio-8007-exec-9] o.s.s.o.provider.endpoint.TokenEndpoint  : Handling error: InvalidGrantException, Invalid authorization code: Dt7HBB
+2022-06-03 19:05:05.711  WARN 5300 --- [http-nio-8007-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [error="invalid_grant", error_description="Invalid authorization code: Dt7HBB"]
+2022-06-03 19:09:06.837  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:14:06.841  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:19:06.844  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:24:06.845  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:29:06.848  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:34:06.853  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:39:06.860  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:44:04.111  WARN 5300 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m27s728ms).
+2022-06-03 19:45:04.585  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-03 19:50:04.585  INFO 5300 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
