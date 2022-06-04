@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.provider.expression.OAuth2MethodSecur
         prePostEnabled = true,//enable @PreAuthorize & @PostAuthorize
         securedEnabled = true,//enable @Secured
         jsr250Enabled = true//enable @RolesAllowed
-)
+)//check by token containing user info & client info
 public class ServerSecurityConfig extends GlobalMethodSecurityConfiguration {
 
     @Override

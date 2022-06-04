@@ -36,10 +36,10 @@ public class AccountController {
         statisticService.add(new StatisticDTO("Account " + accountDTO.getId() + " is created.", new Date()));
         accountService.add(accountDTO);
 
-        // send notificaiton
+
         MessageDTO messageDTO = new MessageDTO();
         messageDTO.setFrom("memberd123@gmail.com");
-        messageDTO.setTo(accountDTO.getEmail());// username is email
+        messageDTO.setTo(accountDTO.getEmail());
         messageDTO.setToName(accountDTO.getUsername());
         messageDTO.setSubject("Welcome");
         messageDTO.setContent("Microservices content");
@@ -60,8 +60,8 @@ public class AccountController {
     @GetMapping("/account/{id}")
     public ResponseEntity<AccountDTO> get(@PathVariable(name = "id") Long id) {
         statisticService.add(new StatisticDTO("Account " + id + " is trying to be accessed.", new Date()));
-        return Optional.of(new ResponseEntity<AccountDTO>(accountService.getOne(id), HttpStatus.OK)) // success tra ve status ok
-                .orElse(new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND)); // fail tra ve status not found
+        return Optional.of(new ResponseEntity<AccountDTO>(accountService.getOne(id), HttpStatus.OK))
+                .orElse(new ResponseEntity<AccountDTO>(HttpStatus.NOT_FOUND));
     }
 
     @Secured("ROLE_PREMIUM_MEMBER")
@@ -78,7 +78,8 @@ public class AccountController {
         accountService.update(accountDTO);
     }
 
-    @PreAuthorize("#oauth2.hasScope('read') && isAuthenticated()")
+    @PreAuthorize("#oauth2.hasScope('read') && " +
+            "isAuthenticated()")// check end user
     @GetMapping("/me")
     public Principal me(Principal principal) {
         return principal;
