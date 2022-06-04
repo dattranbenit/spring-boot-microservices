@@ -32,18 +32,23 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient("jmaster").secret(passwordEncoder.encode("123"))// client (application) info
+        clients.inMemory().withClient("jmaster").secret(passwordEncoder.encode("123"))
                 .authorizedGrantTypes("password", "refresh_token", "implicit", "client_credentials", "authorization_code", "refresh_token")
-                .redirectUris("https://oauthdebugger.com/debug").scopes("read", "write")//send response to uri
+                .redirectUris("https://oauthdebugger.com/debug").scopes("read", "write")
                 .accessTokenValiditySeconds(3600) // 1 hour
-                .refreshTokenValiditySeconds(2592000); // 30 days;
+                .refreshTokenValiditySeconds(2592000) // 30 days;
+
+                .and().withClient("accountservice").secret(passwordEncoder.encode("123"))
+                .authorizedGrantTypes("client_credentials")
+                .scopes("notification", "log")
+                .accessTokenValiditySeconds(5000);//allow account service to access other resource servers as client
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(authenticationManager).tokenStore(tokenStore())//manage end users & store token
+        endpoints.authenticationManager(authenticationManager).tokenStore(tokenStore())
                  .accessTokenConverter(accessTokenConverter())
-                 .userDetailsService(userDetailsService);//check user info khi dung refresh token
+                 .userDetailsService(userDetailsService);
     }
 
     @Override
@@ -51,7 +56,6 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
         oauthServer.passwordEncoder(passwordEncoder);//config password security for oauth server to check client
     }
 
-    //	JWT
     @Bean
     public TokenStore tokenStore() {
         return new JwtTokenStore(accessTokenConverter());
