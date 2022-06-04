@@ -29,7 +29,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
         clients.inMemory().withClient("jmaster").secret(passwordEncoder.encode("123"))// client (application) info
                 .authorizedGrantTypes("password", "refresh_token", "implicit", "client_credentials", "authorization_code")
                 .redirectUris("https://oauthdebugger.com/debug").scopes("read", "write")//send response to uri
-                .accessTokenValiditySeconds(3600) // 1 hour
+                .accessTokenValiditySeconds(3600) // 1 hour, token bao gom end user info
                 .refreshTokenValiditySeconds(2592000); // 30 days;
     }
 
