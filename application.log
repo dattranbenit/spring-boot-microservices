@@ -1,60 +1,336 @@
-2022-06-03 17:25:01.259  INFO [account-service,,] 5117 --- [restartedMain] a.AccountServiceApplication              : Starting AccountServiceApplication using Java 16.0.2 on Dats-MacBook-Pro.local with PID 5117 (/Users/dat/Documents/microservices/account-service/target/classes started by dat in /Users/dat/Documents/microservices/account-service)
-2022-06-03 17:25:01.265  INFO [account-service,,] 5117 --- [restartedMain] a.AccountServiceApplication              : No active profile set, falling back to 1 default profile: "default"
-2022-06-03 17:25:01.351  INFO [account-service,,] 5117 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
-2022-06-03 17:25:01.352  INFO [account-service,,] 5117 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=account-service, profiles=[default], label=null, version=null, state=null
-2022-06-03 17:25:01.354  INFO [account-service,,] 5117 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-06-03 17:25:01.354  INFO [account-service,,] 5117 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-06-03 17:25:02.810  INFO [account-service,,] 5117 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-03 17:25:02.881  INFO [account-service,,] 5117 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
-2022-06-03 17:25:03.326  INFO [account-service,,] 5117 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df6405bd-7b22-3e1a-8790-35199e2f2fc3
-2022-06-03 17:25:04.176  INFO [account-service,,] 5117 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
-2022-06-03 17:25:04.184  INFO [account-service,,] 5117 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-03 17:25:04.184  INFO [account-service,,] 5117 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-06-03 17:25:04.258  INFO [account-service,,] 5117 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-03 17:25:04.260  INFO [account-service,,] 5117 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2905 ms
-2022-06-03 17:25:04.993  WARN [account-service,,] 5117 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
-2022-06-03 17:25:05.845  INFO [account-service,,] 5117 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-03 17:25:05.867  INFO [account-service,,] 5117 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
-2022-06-03 17:25:05.934  INFO [account-service,,] 5117 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-03 17:25:05.974  INFO [account-service,,] 5117 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-03 17:25:06.230  INFO [account-service,,] 5117 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-03 17:25:06.239  INFO [account-service,,] 5117 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-06-03 17:25:06.647  INFO [account-service,,] 5117 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-03 17:25:06.651  INFO [account-service,,] 5117 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-03 17:25:07.053  WARN [account-service,,] 5117 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-03 17:25:07.155  WARN [account-service,,] 5117 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-06-03 17:25:07.178  INFO [account-service,,] 5117 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'statistic-service' URL not provided. Will try picking an instance via load-balancing.
-2022-06-03 17:25:07.269  INFO [account-service,,] 5117 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
-2022-06-03 17:25:10.708  INFO [account-service,,] 5117 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-06-03 17:25:10.864  WARN [account-service,,] 5117 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-06-03 17:25:10.915  INFO [account-service,,] 5117 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoint(s) beneath base path '/actuator'
-2022-06-03 17:25:11.008  INFO [account-service,,] 5117 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-06-03 17:25:11.219  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-06-03 17:25:11.222  INFO [account-service,,] 5117 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-06-03 17:25:11.338  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-06-03 17:25:11.570  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-06-03 17:25:11.623  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-06-03 17:25:11.675  INFO [account-service,,] 5117 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-06-03 17:25:11.800  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654251911799 with initial instances count: 1
-2022-06-03 17:25:11.826  INFO [account-service,,] 5117 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
-2022-06-03 17:25:11.826  INFO [account-service,,] 5117 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654251911826, current=UP, previous=STARTING]
-2022-06-03 17:25:11.827  INFO [account-service,,] 5117 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
-2022-06-03 17:25:11.842  INFO [account-service,,] 5117 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
-2022-06-03 17:25:11.843  INFO [account-service,,] 5117 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
-2022-06-03 17:25:11.889  INFO [account-service,,] 5117 --- [restartedMain] a.AccountServiceApplication              : Started AccountServiceApplication in 11.329 seconds (JVM running for 12.215)
-2022-06-03 17:25:11.904  INFO [account-service,,] 5117 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
-2022-06-03 17:25:12.370  INFO [account-service,,] 5117 --- [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-03 17:25:12.370  INFO [account-service,,] 5117 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-03 17:25:12.373  INFO [account-service,,] 5117 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-06-03 17:25:29.784  INFO [account-service,d975d4a46d6bd10e,d975d4a46d6bd10e] 5117 --- [http-nio-8002-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 207 ms
-2022-06-03 17:25:30.552  WARN [account-service,,] 5117 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2022-06-03 17:25:30.569  WARN [account-service,,] 5117 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+2022-06-04 00:02:39.131  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:07:39.187  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:12:39.195  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:17:39.201  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:22:39.208  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:27:39.211  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:32:39.221  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:37:39.229  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:42:39.238  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:47:39.242  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:52:39.252  INFO [account-service,,] 10727 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 00:57:29.211  INFO [account-service,,] 10727 --- [Thread-5] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-06-04 00:57:29.230  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ACCOUNT-SERVICE with eureka with status DOWN
+2022-06-04 00:57:29.230  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654279049230, current=DOWN, previous=UP]
+2022-06-04 00:57:29.231  INFO [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 00:57:29.280  INFO [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8000/eureka/} exception=I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 34 more
+
+2022-06-04 00:57:29.281  WARN [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2022-06-04 00:57:29.290  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 00:57:29.299  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-04 00:57:29.309  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-04 00:57:29.313  INFO [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8000/eureka/}, exception=I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 22 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 more
+
+2022-06-04 00:57:29.314  WARN [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2022-06-04 00:57:29.315  WARN [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-06-04 00:57:29.316  WARN [account-service,,] 10727 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-06-04 00:57:30.233  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-04 00:57:33.372  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-04 00:57:33.379  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8000/eureka/}, exception=I/O error on DELETE request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE/192.168.1.15:account-service:8002": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE/192.168.1.15:account-service:8002": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 53 more
+
+2022-06-04 00:57:33.379  WARN [account-service,,] 10727 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8000/eureka/apps/ACCOUNT-SERVICE/192.168.1.15:account-service:8002": Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8000 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2022-06-04 00:57:33.380 ERROR [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:196) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:189) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.1.1.jar:3.1.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:212) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:172) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.6.4.jar:2.6.4]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-06-04 00:57:34.034  INFO [account-service,,] 10727 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-04 11:11:46.508  INFO [account-service,,] 2265 --- [restartedMain] a.AccountServiceApplication              : Starting AccountServiceApplication using Java 16.0.2 on Dats-MacBook-Pro.local with PID 2265 (/Users/dat/Documents/microservices/account-service/target/classes started by dat in /Users/dat/Documents/microservices/account-service)
+2022-06-04 11:11:46.510  INFO [account-service,,] 2265 --- [restartedMain] a.AccountServiceApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-06-04 11:11:46.552  INFO [account-service,,] 2265 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-04 11:11:46.553  INFO [account-service,,] 2265 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=account-service, profiles=[default], label=null, version=null, state=null
+2022-06-04 11:11:46.555  INFO [account-service,,] 2265 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-04 11:11:46.555  INFO [account-service,,] 2265 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-04 11:11:48.009  INFO [account-service,,] 2265 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-04 11:11:48.064  INFO [account-service,,] 2265 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+2022-06-04 11:11:48.473  INFO [account-service,,] 2265 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b80d9913-105b-3afd-8fdb-60c49706a0f9
+2022-06-04 11:11:48.786  INFO [account-service,,] 2265 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'serverSecurityConfig' of type [accountservice.security.ServerSecurityConfig$$EnhancerBySpringCGLIB$$e3dacba9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-04 11:11:49.349  INFO [account-service,,] 2265 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2022-06-04 11:11:49.354  INFO [account-service,,] 2265 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-04 11:11:49.355  INFO [account-service,,] 2265 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-04 11:11:49.484  INFO [account-service,,] 2265 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-04 11:11:49.485  INFO [account-service,,] 2265 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2929 ms
+2022-06-04 11:11:50.129  WARN [account-service,,] 2265 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2022-06-04 11:11:51.073  INFO [account-service,,] 2265 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-04 11:11:51.089  INFO [account-service,,] 2265 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-06-04 11:11:51.144  INFO [account-service,,] 2265 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-04 11:11:51.179  INFO [account-service,,] 2265 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-04 11:11:51.422  INFO [account-service,,] 2265 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-04 11:11:51.428  INFO [account-service,,] 2265 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-04 11:11:51.750  INFO [account-service,,] 2265 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-04 11:11:51.815  INFO [account-service,,] 2265 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 11:11:52.193  WARN [account-service,,] 2265 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-04 11:11:52.327  WARN [account-service,,] 2265 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-04 11:11:52.352  INFO [account-service,,] 2265 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'statistic-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 11:11:52.436  INFO [account-service,,] 2265 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 11:11:52.811  WARN [account-service,,] 2265 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-06-04 11:11:55.180  INFO [account-service,,] 2265 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 626ad591-6a9f-4db4-ad8e-c11295589f05
+
+2022-06-04 11:11:55.302  INFO [account-service,,] 2265 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-04 11:11:55.409  INFO [account-service,,] 2265 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-04 11:11:55.558  WARN [account-service,,] 2265 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-04 11:11:55.617  INFO [account-service,,] 2265 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoint(s) beneath base path '/actuator'
+2022-06-04 11:11:55.725  INFO [account-service,,] 2265 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-04 11:11:55.942  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-04 11:11:55.946  INFO [account-service,,] 2265 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 11:11:56.066  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-04 11:11:56.069  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-04 11:11:56.246  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-04 11:11:56.298  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-04 11:11:56.344  INFO [account-service,,] 2265 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-04 11:11:56.463  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654315916462 with initial instances count: 1
+2022-06-04 11:11:56.477  INFO [account-service,,] 2265 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
+2022-06-04 11:11:56.478  INFO [account-service,,] 2265 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654315916478, current=UP, previous=STARTING]
+2022-06-04 11:11:56.479  INFO [account-service,,] 2265 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 11:11:56.494  INFO [account-service,,] 2265 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2022-06-04 11:11:56.495  INFO [account-service,,] 2265 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
+2022-06-04 11:11:56.528  INFO [account-service,,] 2265 --- [restartedMain] a.AccountServiceApplication              : Started AccountServiceApplication in 10.727 seconds (JVM running for 11.96)
+2022-06-04 11:11:56.539  INFO [account-service,,] 2265 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 11:11:57.021  INFO [account-service,,] 2265 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-04 11:11:57.022  INFO [account-service,,] 2265 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-04 11:11:57.023  INFO [account-service,,] 2265 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-04 11:12:32.007  WARN [account-service,8088c4e27ae7bd26,9d6661d1d3c7cf2e] 2265 --- [pool-2-thread-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: statistic-service
+2022-06-04 11:12:32.009  WARN [account-service,8088c4e27ae7bd26,9d6661d1d3c7cf2e] 2265 --- [pool-2-thread-1] .s.c.o.l.FeignBlockingLoadBalancerClient : Load balancer does not contain an instance for the service statistic-service
+2022-06-04 11:12:32.025 ERROR [account-service,8088c4e27ae7bd26,7e95a6c9ec9337df] 2265 --- [http-nio-8002-exec-2] a.client.statistic.StatisticServiceImpl  : Fallback statistic add
+2022-06-04 11:12:32.035  INFO [account-service,8088c4e27ae7bd26,e51343954ed06fc0] 2265 --- [http-nio-8002-exec-2] a.service.account.AccountServiceImpl     : AccountService: Get All
+2022-06-04 11:12:33.035  WARN [account-service,,] 2265 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-06-04 11:12:33.048  WARN [account-service,,] 2265 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 4 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
 
 org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
@@ -91,75 +367,97 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
 	... 11 common frames omitted
 
-2022-06-03 17:26:58.939  INFO [account-service,,] 5117 --- [Thread-5] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
-2022-06-03 17:26:58.944  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ACCOUNT-SERVICE with eureka with status DOWN
-2022-06-03 17:26:58.945  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654252018945, current=DOWN, previous=UP]
-2022-06-03 17:26:58.947  INFO [account-service,,] 5117 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
-2022-06-03 17:26:58.961  INFO [account-service,,] 5117 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
-2022-06-03 17:26:58.996  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-06-03 17:26:59.011  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-06-03 17:26:59.023  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-06-03 17:26:59.940  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2022-06-03 17:27:03.070  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2022-06-03 17:27:03.081  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - deregister  status: 200
-2022-06-03 17:27:03.753  INFO [account-service,,] 5117 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2022-06-03 17:27:07.563  INFO [account-service,,] 5143 --- [restartedMain] a.AccountServiceApplication              : Starting AccountServiceApplication using Java 16.0.2 on Dats-MacBook-Pro.local with PID 5143 (/Users/dat/Documents/microservices/account-service/target/classes started by dat in /Users/dat/Documents/microservices/account-service)
-2022-06-03 17:27:07.566  INFO [account-service,,] 5143 --- [restartedMain] a.AccountServiceApplication              : No active profile set, falling back to 1 default profile: "default"
-2022-06-03 17:27:07.627  INFO [account-service,,] 5143 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
-2022-06-03 17:27:07.628  INFO [account-service,,] 5143 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=account-service, profiles=[default], label=null, version=null, state=null
-2022-06-03 17:27:07.629  INFO [account-service,,] 5143 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-06-03 17:27:07.630  INFO [account-service,,] 5143 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-06-03 17:27:08.941  INFO [account-service,,] 5143 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-06-03 17:27:09.000  INFO [account-service,,] 5143 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
-2022-06-03 17:27:09.392  INFO [account-service,,] 5143 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df6405bd-7b22-3e1a-8790-35199e2f2fc3
-2022-06-03 17:27:10.243  INFO [account-service,,] 5143 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
-2022-06-03 17:27:10.248  INFO [account-service,,] 5143 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-06-03 17:27:10.248  INFO [account-service,,] 5143 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-06-03 17:27:10.335  INFO [account-service,,] 5143 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-06-03 17:27:10.336  INFO [account-service,,] 5143 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2706 ms
-2022-06-03 17:27:11.001  WARN [account-service,,] 5143 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
-2022-06-03 17:27:12.014  INFO [account-service,,] 5143 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-06-03 17:27:12.035  INFO [account-service,,] 5143 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
-2022-06-03 17:27:12.087  INFO [account-service,,] 5143 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-06-03 17:27:12.124  INFO [account-service,,] 5143 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-06-03 17:27:12.354  INFO [account-service,,] 5143 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-06-03 17:27:12.361  INFO [account-service,,] 5143 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-06-03 17:27:12.672  INFO [account-service,,] 5143 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-06-03 17:27:12.676  INFO [account-service,,] 5143 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-06-03 17:27:13.060  WARN [account-service,,] 5143 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-06-03 17:27:13.156  WARN [account-service,,] 5143 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-06-03 17:27:13.177  INFO [account-service,,] 5143 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'statistic-service' URL not provided. Will try picking an instance via load-balancing.
-2022-06-03 17:27:13.279  INFO [account-service,,] 5143 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
-2022-06-03 17:27:16.104  INFO [account-service,,] 5143 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-06-03 17:27:16.301  WARN [account-service,,] 5143 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-06-03 17:27:16.355  INFO [account-service,,] 5143 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoint(s) beneath base path '/actuator'
-2022-06-03 17:27:16.454  INFO [account-service,,] 5143 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-06-03 17:27:16.678  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-06-03 17:27:16.681  INFO [account-service,,] 5143 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-06-03 17:27:16.791  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-06-03 17:27:16.792  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-06-03 17:27:16.947  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-06-03 17:27:17.001  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-06-03 17:27:17.048  INFO [account-service,,] 5143 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-06-03 17:27:17.187  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654252037186 with initial instances count: 4
-2022-06-03 17:27:17.202  INFO [account-service,,] 5143 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
-2022-06-03 17:27:17.203  INFO [account-service,,] 5143 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654252037203, current=UP, previous=STARTING]
-2022-06-03 17:27:17.204  INFO [account-service,,] 5143 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
-2022-06-03 17:27:17.224  INFO [account-service,,] 5143 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
-2022-06-03 17:27:17.225  INFO [account-service,,] 5143 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
-2022-06-03 17:27:17.273  INFO [account-service,,] 5143 --- [restartedMain] a.AccountServiceApplication              : Started AccountServiceApplication in 10.369 seconds (JVM running for 11.265)
-2022-06-03 17:27:17.290  INFO [account-service,,] 5143 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
-2022-06-03 17:27:17.492  INFO [account-service,,] 5143 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-06-03 17:27:17.493  INFO [account-service,,] 5143 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-06-03 17:27:17.496  INFO [account-service,,] 5143 --- [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-06-03 17:28:08.019  INFO [account-service,e64c373db134f2b0,e64c373db134f2b0] 5143 --- [http-nio-8002-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 239 ms
-2022-06-03 17:28:08.718  WARN [account-service,,] 5143 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2022-06-03 17:28:08.731  WARN [account-service,,] 5143 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+2022-06-04 11:16:56.100  INFO [account-service,,] 2265 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 11:21:56.110  INFO [account-service,,] 2265 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 11:42:32.298  WARN [account-service,,] 2265 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m10s675ms).
+2022-06-04 13:01:59.923  WARN [account-service,,] 2265 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m27s627ms).
+2022-06-04 14:11:00.210  WARN [account-service,,] 2265 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h9m287ms).
+2022-06-04 15:15:40.481  WARN [account-service,,] 2265 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m40s271ms).
+2022-06-04 15:16:00.831  INFO [account-service,,] 2265 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - Re-registering apps/ACCOUNT-SERVICE
+2022-06-04 15:16:00.832  INFO [account-service,,] 2265 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 15:16:00.846  INFO [account-service,,] 2265 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 15:18:29.504  INFO [account-service,,] 2265 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:23:29.516  INFO [account-service,,] 2265 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:24:27.574  INFO [account-service,,] 2265 --- [Thread-5] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-06-04 15:24:27.582  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ACCOUNT-SERVICE with eureka with status DOWN
+2022-06-04 15:24:27.583  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654331067583, current=DOWN, previous=UP]
+2022-06-04 15:24:27.583  INFO [account-service,,] 2265 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 15:24:27.598  INFO [account-service,,] 2265 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 15:24:27.627  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 15:24:27.678  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-04 15:24:27.694  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-04 15:24:28.692  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-04 15:24:31.699  WARN [account-service,,] 2265 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2022-06-04 15:24:31.823  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-04 15:24:31.830  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - deregister  status: 200
+2022-06-04 15:24:32.585  INFO [account-service,,] 2265 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-04 15:24:35.969  INFO [account-service,,] 2473 --- [restartedMain] a.AccountServiceApplication              : Starting AccountServiceApplication using Java 16.0.2 on Dats-MacBook-Pro.local with PID 2473 (/Users/dat/Documents/microservices/account-service/target/classes started by dat in /Users/dat/Documents/microservices/account-service)
+2022-06-04 15:24:35.971  INFO [account-service,,] 2473 --- [restartedMain] a.AccountServiceApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-06-04 15:24:36.013  INFO [account-service,,] 2473 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-04 15:24:36.013  INFO [account-service,,] 2473 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=account-service, profiles=[default], label=null, version=null, state=null
+2022-06-04 15:24:36.015  INFO [account-service,,] 2473 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-04 15:24:36.015  INFO [account-service,,] 2473 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-04 15:24:37.293  INFO [account-service,,] 2473 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-04 15:24:37.349  INFO [account-service,,] 2473 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2022-06-04 15:24:37.749  INFO [account-service,,] 2473 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b80d9913-105b-3afd-8fdb-60c49706a0f9
+2022-06-04 15:24:38.035  INFO [account-service,,] 2473 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'serverSecurityConfig' of type [accountservice.security.ServerSecurityConfig$$EnhancerBySpringCGLIB$$40e6071] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-04 15:24:38.601  INFO [account-service,,] 2473 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2022-06-04 15:24:38.607  INFO [account-service,,] 2473 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-04 15:24:38.608  INFO [account-service,,] 2473 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-04 15:24:38.732  INFO [account-service,,] 2473 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-04 15:24:38.733  INFO [account-service,,] 2473 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2717 ms
+2022-06-04 15:24:39.359  WARN [account-service,,] 2473 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2022-06-04 15:24:40.228  INFO [account-service,,] 2473 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-04 15:24:40.245  INFO [account-service,,] 2473 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-06-04 15:24:40.288  INFO [account-service,,] 2473 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-04 15:24:40.321  INFO [account-service,,] 2473 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-04 15:24:40.549  INFO [account-service,,] 2473 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-04 15:24:40.555  INFO [account-service,,] 2473 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-04 15:24:40.848  INFO [account-service,,] 2473 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-04 15:24:40.865  INFO [account-service,,] 2473 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 15:24:41.268  WARN [account-service,,] 2473 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-04 15:24:41.370  WARN [account-service,,] 2473 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-04 15:24:41.392  INFO [account-service,,] 2473 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'statistic-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 15:24:41.503  INFO [account-service,,] 2473 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 15:24:41.845  WARN [account-service,,] 2473 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-06-04 15:24:44.109  INFO [account-service,,] 2473 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7e4e6962-df86-428c-81fb-7779c2fe16f1
+
+2022-06-04 15:24:44.217  INFO [account-service,,] 2473 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-04 15:24:44.264  INFO [account-service,,] 2473 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-04 15:24:44.405  WARN [account-service,,] 2473 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-04 15:24:44.473  INFO [account-service,,] 2473 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoint(s) beneath base path '/actuator'
+2022-06-04 15:24:44.613  INFO [account-service,,] 2473 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-04 15:24:44.906  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-04 15:24:44.911  INFO [account-service,,] 2473 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:24:45.064  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-04 15:24:45.067  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-04 15:24:45.263  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-04 15:24:45.324  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-04 15:24:45.376  INFO [account-service,,] 2473 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-04 15:24:45.491  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654331085490 with initial instances count: 1
+2022-06-04 15:24:45.504  INFO [account-service,,] 2473 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
+2022-06-04 15:24:45.505  INFO [account-service,,] 2473 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654331085505, current=UP, previous=STARTING]
+2022-06-04 15:24:45.505  INFO [account-service,,] 2473 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 15:24:45.522  INFO [account-service,,] 2473 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2022-06-04 15:24:45.523  INFO [account-service,,] 2473 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
+2022-06-04 15:24:45.559  INFO [account-service,,] 2473 --- [restartedMain] a.AccountServiceApplication              : Started AccountServiceApplication in 10.222 seconds (JVM running for 10.996)
+2022-06-04 15:24:45.576  INFO [account-service,,] 2473 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 15:24:46.106  INFO [account-service,,] 2473 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-04 15:24:46.106  INFO [account-service,,] 2473 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-04 15:24:46.107  INFO [account-service,,] 2473 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-04 15:25:16.992  WARN [account-service,7aab1aaedf756ce4,e17e24ef5848b50e] 2473 --- [pool-2-thread-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: statistic-service
+2022-06-04 15:25:16.993  WARN [account-service,7aab1aaedf756ce4,e17e24ef5848b50e] 2473 --- [pool-2-thread-1] .s.c.o.l.FeignBlockingLoadBalancerClient : Load balancer does not contain an instance for the service statistic-service
+2022-06-04 15:25:17.009 ERROR [account-service,7aab1aaedf756ce4,162630c402488a3d] 2473 --- [http-nio-8002-exec-2] a.client.statistic.StatisticServiceImpl  : Fallback statistic add
+2022-06-04 15:25:17.019  INFO [account-service,7aab1aaedf756ce4,a9c6bc5e5a0ca415] 2473 --- [http-nio-8002-exec-2] a.service.account.AccountServiceImpl     : AccountService: Get All
+2022-06-04 15:25:18.015  WARN [account-service,,] 2473 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-06-04 15:25:18.026  WARN [account-service,,] 2473 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 4 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
 
 org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
@@ -196,14 +494,155 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
 	... 11 common frames omitted
 
-2022-06-03 17:29:14.537 ERROR [account-service,9eed3332e7967198,abdc4e4484f8c051] 5143 --- [http-nio-8002-exec-1] a.c.n.NotificationServiceImpl            : Notification Service is slow
-2022-06-03 17:32:05.156 ERROR [account-service,c4a795e5e4d808a3,8294a94977b348ca] 5143 --- [http-nio-8002-exec-5] a.c.n.NotificationServiceImpl            : Notification Service is slow
-2022-06-03 17:32:16.849  INFO [account-service,,] 5143 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:37:16.858  INFO [account-service,,] 5143 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:42:16.868  INFO [account-service,,] 5143 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:47:16.878  INFO [account-service,,] 5143 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-06-03 17:56:48.167  WARN [account-service,,] 5143 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m35s464ms).
-2022-06-03 17:56:53.709  INFO [account-service,,] 5143 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - Re-registering apps/ACCOUNT-SERVICE
-2022-06-03 17:56:53.710  INFO [account-service,,] 5143 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
-2022-06-03 17:56:53.743  INFO [account-service,,] 5143 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
-2022-06-03 17:59:22.351  INFO [account-service,,] 5143 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:29:45.099  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:34:45.115  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:39:45.125  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 15:59:04.432  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m23s615ms).
+2022-06-04 17:19:52.154  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m47s724ms).
+2022-06-04 17:19:57.617  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - Re-registering apps/ACCOUNT-SERVICE
+2022-06-04 17:19:57.618  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 17:19:57.630  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 18:30:07.063  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m14s909ms).
+2022-06-04 18:45:12.269  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-04 18:45:12.272  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-04 18:45:12.272  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-04 18:45:12.273  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-04 18:45:12.273  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-04 18:45:12.273  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-04 18:45:12.273  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-04 18:45:12.399  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-04 19:03:44.296  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m37s234ms).
+2022-06-04 19:06:36.296  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m52s).
+2022-06-04 19:07:10.576  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:12:10.585  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:17:10.584  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:22:10.579  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:50:36.366  WARN [account-service,,] 2473 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m59s953ms).
+2022-06-04 19:50:42.668  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - Re-registering apps/ACCOUNT-SERVICE
+2022-06-04 19:50:42.669  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 19:50:42.706  INFO [account-service,,] 2473 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 19:51:12.798  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-04 19:51:12.800  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-04 19:51:12.800  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-04 19:51:12.800  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-04 19:51:12.800  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-04 19:51:12.801  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-04 19:51:12.801  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-04 19:51:12.815  INFO [account-service,,] 2473 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-04 19:51:40.540  INFO [account-service,,] 2473 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:54:41.356  INFO [account-service,,] 2473 --- [Thread-5] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-06-04 19:54:41.364  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ACCOUNT-SERVICE with eureka with status DOWN
+2022-06-04 19:54:41.364  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654347281364, current=DOWN, previous=UP]
+2022-06-04 19:54:41.365  INFO [account-service,,] 2473 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 19:54:41.377  INFO [account-service,,] 2473 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 19:54:41.406  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 19:54:41.414  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-04 19:54:41.424  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-04 19:54:42.284  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-04 19:54:45.292  WARN [account-service,,] 2473 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2022-06-04 19:54:45.428  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-04 19:54:45.448  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - deregister  status: 200
+2022-06-04 19:54:46.184  INFO [account-service,,] 2473 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-04 19:54:49.863  INFO [account-service,,] 4162 --- [restartedMain] a.AccountServiceApplication              : Starting AccountServiceApplication using Java 16.0.2 on Dats-MacBook-Pro.local with PID 4162 (/Users/dat/Documents/microservices/account-service/target/classes started by dat in /Users/dat/Documents/microservices/account-service)
+2022-06-04 19:54:49.865  INFO [account-service,,] 4162 --- [restartedMain] a.AccountServiceApplication              : No active profile set, falling back to 1 default profile: "default"
+2022-06-04 19:54:49.916  INFO [account-service,,] 4162 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8001
+2022-06-04 19:54:49.917  INFO [account-service,,] 4162 --- [restartedMain] o.s.b.context.config.ConfigDataLoader    : Located environment: name=account-service, profiles=[default], label=null, version=null, state=null
+2022-06-04 19:54:49.918  INFO [account-service,,] 4162 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-04 19:54:49.919  INFO [account-service,,] 4162 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-04 19:54:51.217  INFO [account-service,,] 4162 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-04 19:54:51.274  INFO [account-service,,] 4162 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2022-06-04 19:54:51.693  INFO [account-service,,] 4162 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b80d9913-105b-3afd-8fdb-60c49706a0f9
+2022-06-04 19:54:52.004  INFO [account-service,,] 4162 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'serverSecurityConfig' of type [accountservice.security.ServerSecurityConfig$$EnhancerBySpringCGLIB$$f21f4edb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-04 19:54:52.559  INFO [account-service,,] 4162 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2022-06-04 19:54:52.564  INFO [account-service,,] 4162 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-04 19:54:52.565  INFO [account-service,,] 4162 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-06-04 19:54:52.689  INFO [account-service,,] 4162 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-04 19:54:52.693  INFO [account-service,,] 4162 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2774 ms
+2022-06-04 19:54:53.328  WARN [account-service,,] 4162 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused}]
+2022-06-04 19:54:54.369  INFO [account-service,,] 4162 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-04 19:54:54.385  INFO [account-service,,] 4162 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-06-04 19:54:54.428  INFO [account-service,,] 4162 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-04 19:54:54.464  INFO [account-service,,] 4162 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-04 19:54:54.679  INFO [account-service,,] 4162 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-04 19:54:54.685  INFO [account-service,,] 4162 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-06-04 19:54:54.988  INFO [account-service,,] 4162 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-04 19:54:55.002  INFO [account-service,,] 4162 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-04 19:54:55.422  WARN [account-service,,] 4162 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-04 19:54:55.545  WARN [account-service,,] 4162 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-06-04 19:54:55.567  INFO [account-service,,] 4162 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'statistic-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 19:54:55.652  INFO [account-service,,] 4162 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'notification-service' URL not provided. Will try picking an instance via load-balancing.
+2022-06-04 19:54:56.014  WARN [account-service,,] 4162 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-06-04 19:54:58.463  INFO [account-service,,] 4162 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3e7af4f9-85fa-424f-99a5-019699bd252f
+
+2022-06-04 19:54:58.585  INFO [account-service,,] 4162 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-06-04 19:54:58.647  INFO [account-service,,] 4162 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-04 19:54:58.823  WARN [account-service,,] 4162 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-04 19:54:58.881  INFO [account-service,,] 4162 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 26 endpoint(s) beneath base path '/actuator'
+2022-06-04 19:54:59.006  INFO [account-service,,] 4162 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-04 19:54:59.283  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-04 19:54:59.287  INFO [account-service,,] 4162 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-04 19:54:59.404  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-04 19:54:59.407  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-04 19:54:59.570  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-04 19:54:59.644  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-04 19:54:59.705  INFO [account-service,,] 4162 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-04 19:54:59.846  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1654347299846 with initial instances count: 1
+2022-06-04 19:54:59.861  INFO [account-service,,] 4162 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACCOUNT-SERVICE with eureka with status UP
+2022-06-04 19:54:59.862  INFO [account-service,,] 4162 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1654347299862, current=UP, previous=STARTING]
+2022-06-04 19:54:59.863  INFO [account-service,,] 4162 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002: registering service...
+2022-06-04 19:54:59.881  INFO [account-service,,] 4162 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2022-06-04 19:54:59.882  INFO [account-service,,] 4162 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8002
+2022-06-04 19:54:59.917  INFO [account-service,,] 4162 --- [restartedMain] a.AccountServiceApplication              : Started AccountServiceApplication in 10.703 seconds (JVM running for 11.65)
+2022-06-04 19:54:59.933  INFO [account-service,,] 4162 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACCOUNT-SERVICE/192.168.1.15:account-service:8002 - registration status: 204
+2022-06-04 19:55:00.487  INFO [account-service,,] 4162 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-04 19:55:00.488  INFO [account-service,,] 4162 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-04 19:55:00.490  INFO [account-service,,] 4162 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-04 19:55:16.721  WARN [account-service,78fd49f159854b20,ff5dd9550c55aa02] 4162 --- [pool-2-thread-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: statistic-service
+2022-06-04 19:55:16.722  WARN [account-service,78fd49f159854b20,ff5dd9550c55aa02] 4162 --- [pool-2-thread-1] .s.c.o.l.FeignBlockingLoadBalancerClient : Load balancer does not contain an instance for the service statistic-service
+2022-06-04 19:55:16.741 ERROR [account-service,78fd49f159854b20,aaf0d728a6cc3663] 4162 --- [http-nio-8002-exec-2] a.client.statistic.StatisticServiceImpl  : Fallback statistic add
+2022-06-04 19:55:16.753  INFO [account-service,78fd49f159854b20,b64953666710a112] 4162 --- [http-nio-8002-exec-2] a.service.account.AccountServiceImpl     : AccountService: Get All
+2022-06-04 19:55:17.745  WARN [account-service,,] 4162 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-06-04 19:55:17.757  WARN [account-service,,] 4162 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 4 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:669) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:645) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:497) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:600) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:372) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1299) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1120) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1051) ~[na:na]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776) ~[spring-web-5.3.16.jar:5.3.16]
+	... 11 common frames omitted
+
