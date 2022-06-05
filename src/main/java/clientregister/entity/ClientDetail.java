@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "oauth_client_details")
+@Table(name = "oauth_client_details")//requires all columns
 @Data
 public class ClientDetail {
     @Id
