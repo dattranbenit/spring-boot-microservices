@@ -16,6 +16,8 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
+import javax.sql.DataSource;
+
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableAuthorizationServer
@@ -30,18 +32,22 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
     PasswordEncoder passwordEncoder;
 
+    @Autowired
+    DataSource dataSource;
+
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient("jmaster").secret(passwordEncoder.encode("123"))
-                .authorizedGrantTypes("password", "refresh_token", "implicit", "client_credentials", "authorization_code", "refresh_token")
-                .redirectUris("https://oauthdebugger.com/debug").scopes("read", "write")
-                .accessTokenValiditySeconds(3600) // 1 hour
-                .refreshTokenValiditySeconds(2592000) // 30 days;
-
-                .and().withClient("accountservice").secret(passwordEncoder.encode("123"))
-                .authorizedGrantTypes("client_credentials")
-                .scopes("notification", "log")
-                .accessTokenValiditySeconds(5000);//allow account service to access other resource servers as client
+//        clients.inMemory().withClient("jmaster").secret(passwordEncoder.encode("123"))
+//                .authorizedGrantTypes("password", "refresh_token", "implicit", "client_credentials", "authorization_code", "refresh_token")
+//                .redirectUris("https://oauthdebugger.com/debug").scopes("read", "write")
+//                .accessTokenValiditySeconds(3600) // 1 hour
+//                .refreshTokenValiditySeconds(2592000) // 30 days;
+//
+//                .and().withClient("accountservice").secret(passwordEncoder.encode("123"))
+//                .authorizedGrantTypes("client_credentials")
+//                .scopes("notification", "log")
+//                .accessTokenValiditySeconds(5000);//allow account service to access other resource servers as client
+        clients.jdbc(dataSource);
     }
 
     @Override
