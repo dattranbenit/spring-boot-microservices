@@ -27,22 +27,22 @@ class AccountServiceImpl implements AccountService {
 
     @Override
     public void add(AccountDTO accountDTO) {
+        logger.info("AccountService: Add account");
         Account account = modelMapper.map(accountDTO, Account.class);
         account.setPassword(new BCryptPasswordEncoder().encode(accountDTO.getPassword()));
 
         accountDao.save(account);
 
         accountDTO.setId(account.getId());
+        logger.info("AccountService: Add account");
     }
 
     @Override
     public void update(AccountDTO accountDTO) {
+        logger.warn(accountDTO.getUsername());
         Account account = accountDao.getById(accountDTO.getId());
         if (account != null) {
-            modelMapper.typeMap(AccountDTO.class, Account.class)
-                    .addMappings(mapper -> mapper.skip(Account::setPassword)).map(accountDTO, account);
-
-            accountDao.save(account);
+            accountDao.save(modelMapper.map(accountDTO, Account.class));
         }
     }
 

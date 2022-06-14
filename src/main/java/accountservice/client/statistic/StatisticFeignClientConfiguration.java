@@ -1,6 +1,8 @@
 package accountservice.client.statistic;
 
 import feign.RequestInterceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.openfeign.security.OAuth2FeignRequestInterceptor;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +15,8 @@ import java.util.List;
 
 @SuppressWarnings("deprecation")
 public class StatisticFeignClientConfiguration {
+    Logger logger = LoggerFactory.getLogger(this.getClass());
+
 
     @Value("${server.oauth2.token.url}")
     private String tokenUrl;
@@ -33,7 +37,8 @@ public class StatisticFeignClientConfiguration {
     }
 
     private OAuth2ProtectedResourceDetails resourceDetails() {
-        final ClientCredentialsResourceDetails details = new ClientCredentialsResourceDetails();//force client(server) to identify itself when connect to another server
+        ClientCredentialsResourceDetails details = new ClientCredentialsResourceDetails();//force client(server) to identify itself when connect to another server
+        details.setGrantType("client_credentials");
         details.setAccessTokenUri(tokenUrl);//get token from url
         details.setClientId(clientId);
         details.setClientSecret(clientSecret);

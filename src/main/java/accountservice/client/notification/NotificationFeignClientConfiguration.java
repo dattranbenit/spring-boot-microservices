@@ -34,6 +34,7 @@ public class NotificationFeignClientConfiguration {
 
     private OAuth2ProtectedResourceDetails resourceDetails() {
         final ClientCredentialsResourceDetails details = new ClientCredentialsResourceDetails();//force client(server) to identify itself when connect to another server
+        details.setGrantType("client_credentials");
         details.setAccessTokenUri(tokenUrl);//get token from url
         details.setClientId(clientId);
         details.setClientSecret(clientSecret);
